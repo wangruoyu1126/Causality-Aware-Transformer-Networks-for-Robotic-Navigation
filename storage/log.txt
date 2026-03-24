@@ -1,0 +1,80 @@
+[1m[02/24 22:58:13[0m [1;32mINFO[0m[1m:][0m Running with args Namespace(approx_ckpt_step_interval=None, approx_ckpt_steps_count=None, checkpoint=None, collect_valid_results=False, config_kwargs=None, deterministic_agents=False, deterministic_cudnn=False, disable_config_saving=False, disable_tensorboard=False, distributed_ip_and_port='127.0.0.1:0', eval=False, experiment='causalRNN', experiment_base='projects/objectnav_causalRNN/experiments/robothor/clip', extra_tag='', infer_output_dir=False, log_level='info', machine_id=0, max_sampler_processes_per_worker=1024, output_dir='storage/Causal-RNN', restart_pipeline=False, save_dir_fmt=<SaveDirFormat.FLAT: 'FLAT'>, seed=None, skip_checkpoints=0, test_date=None, test_expert=False)	[main.py: 420]
+fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[1m[02/24 22:58:25[0m [1;33mWARNING[0m[1m:][0m Failed to get a git diff of the current project. Is it possible that /home/ruoyuwang/code/eai_objnav is not under version control?	[runner.py: 756]
+[1m[02/24 22:58:25[0m [1;32mINFO[0m[1m:][0m Config files saved to storage/Causal-RNN/used_configs/ObjectNav-RoboTHOR-RGB-ClipResNet50GRU-DDPPO/2024-02-24_22-58-25	[runner.py: 798]
+[1m[02/24 22:58:25[0m [1;32mINFO[0m[1m:][0m Using 1 train workers on devices (device(type='cuda', index=0),)	[runner.py: 239]
+[1m[02/24 22:58:25[0m [1;32mINFO[0m[1m:][0m ==== VisualNavActorCriticCausal ['Causal']	[system.py: 197]
+[1m[02/24 22:58:25[0m [1;32mINFO[0m[1m:][0m there are 1 belief models: ['single_belief']	[visual_nav_models.py: 393]
+[1m[02/24 22:58:25[0m [1;32mINFO[0m[1m:][0m Using local worker ids [0] (total 1 workers in machine 0)	[runner.py: 248]
+[1m[02/24 22:58:30[0m [1;32mINFO[0m[1m:][0m Started 1 train processes	[runner.py: 483]
+[1m[02/24 22:58:30[0m [1;32mINFO[0m[1m:][0m train 0 args {'experiment_name': 'ObjectNav-RoboTHOR-RGB-ClipResNet50GRU-DDPPO', 'config': <projects.objectnav_causalRNN.experiments.robothor.clip.causalRNN.ObjectNavRoboThorClipRGBPPOExperimentConfig object at 0x7f94845cb520>, 'results_queue': <multiprocessing.queues.Queue object at 0x7f938a94adf0>, 'checkpoints_queue': <multiprocessing.queues.Queue object at 0x7f938a968af0>, 'checkpoints_dir': 'storage/Causal-RNN/checkpoints/ObjectNav-RoboTHOR-RGB-ClipResNet50GRU-DDPPO/2024-02-24_22-58-25', 'seed': 1358100971, 'deterministic_cudnn': False, 'mp_ctx': <multiprocessing.context.ForkServerContext object at 0x7f938a971370>, 'num_workers': 1, 'device': device(type='cuda', index=0), 'distributed_ip': '127.0.0.1', 'distributed_port': 0, 'max_sampler_processes_per_worker': 1024, 'save_ckpt_after_every_pipeline_stage': True, 'initial_model_state_dict': '[SUPPRESSED]', 'first_local_worker_id': 0, 'mode': 'train', 'worker_id': 0}	[runner.py: 328]
+[1m[02/24 22:58:30[0m [1;32mINFO[0m[1m:][0m Using 1 valid workers on devices (device(type='cuda', index=0),)	[runner.py: 239]
+[1m[02/24 22:58:33[0m [1;32mINFO[0m[1m:][0m Started 1 valid processes	[runner.py: 509]
+[1m[02/24 22:58:33[0m [1;32mINFO[0m[1m:][0m valid 0 args {'config': <projects.objectnav_causalRNN.experiments.robothor.clip.causalRNN.ObjectNavRoboThorClipRGBPPOExperimentConfig object at 0x7f94845cb520>, 'results_queue': <multiprocessing.queues.Queue object at 0x7f93b5184d90>, 'checkpoints_queue': <multiprocessing.queues.Queue object at 0x7f93b51a3b20>, 'seed': 12345, 'deterministic_cudnn': False, 'deterministic_agents': False, 'mp_ctx': <multiprocessing.context.ForkServerContext object at 0x7f93b512e3a0>, 'device': device(type='cuda', index=0), 'max_sampler_processes_per_worker': 1024, 'mode': 'valid', 'worker_id': 0}	[runner.py: 343]
+[1m[02/24 22:58:37[0m [1;32mINFO[0m[1m:][0m ==== VisualNavActorCriticCausal ['Causal']	[system.py: 197]
+[1m[02/24 22:58:37[0m [1;32mINFO[0m[1m:][0m there are 1 belief models: ['single_belief']	[visual_nav_models.py: 393]
+[1m[02/24 22:58:38[0m [1;32mINFO[0m[1m:][0m ====== before optimizer, self.actor_critic <class 'allenact_plugins.navigation_plugin.objectnav.models.ObjectNavCausalRNNActorCritic'>	[system.py: 197]
+[1m[02/24 22:58:38[0m [1;32mINFO[0m[1m:][0m ====== before optimizer, self.sensor_preprocessor_graph.preprocessors[rgb_clip_resnet] <generator object Module.parameters at 0x7f938a4d1890>	[system.py: 197]
+[1m[02/24 22:58:38[0m [1;31mERROR[0m[1m:][0m [train worker 0] Encountered OSError, exiting.	[engine.py: 1654]
+[1m[02/24 22:58:38[0m [1;31mERROR[0m[1m:][0m Traceback (most recent call last):
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 1646, in train
+    self.run_pipeline()
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 1372, in run_pipeline
+    self.initialize_storage_and_viz(
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 448, in initialize_storage_and_viz
+    observations = self.vector_tasks.get_observations()
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 304, in vector_tasks
+    sampler_fn_args=self.get_sampler_fn_args(seeds),
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 357, in get_sampler_fn_args
+    return [
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 358, in <listcomp>
+    fn(
+  File "/home/ruoyuwang/code/eai_objnav/projects/objectnav_causalRNN/experiments/robothor/objectnav_robothor_base.py", line 59, in train_task_sampler_args
+    kwargs = super(ObjectNavRoboThorBaseConfig, self).train_task_sampler_args(
+  File "/home/ruoyuwang/code/eai_objnav/projects/objectnav_causalRNN/experiments/objectnav_thor_base.py", line 282, in train_task_sampler_args
+    res = self._get_sampler_args_for_scene_split(
+  File "/home/ruoyuwang/code/eai_objnav/projects/objectnav_causalRNN/experiments/objectnav_thor_base.py", line 237, in _get_sampler_args_for_scene_split
+    x_displays = get_open_x_displays(throw_error_if_empty=True)
+  File "/home/ruoyuwang/code/eai_objnav/allenact_plugins/ithor_plugin/ithor_util.py", line 83, in get_open_x_displays
+    raise IOError(
+OSError: Could not find any open X-displays on which to run AI2-THOR processes.  Please see the AI2-THOR installation instructions at https://allenact.org/installation/installation-framework/#installation-of-ithor-ithor-plugin for information as to how to start such displays.
+	[engine.py: 1657]
+Traceback (most recent call last):
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 1646, in train
+    self.run_pipeline()
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 1372, in run_pipeline
+    self.initialize_storage_and_viz(
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 448, in initialize_storage_and_viz
+    observations = self.vector_tasks.get_observations()
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 304, in vector_tasks
+    sampler_fn_args=self.get_sampler_fn_args(seeds),
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 357, in get_sampler_fn_args
+    return [
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/engine.py", line 358, in <listcomp>
+    fn(
+  File "/home/ruoyuwang/code/eai_objnav/projects/objectnav_causalRNN/experiments/robothor/objectnav_robothor_base.py", line 59, in train_task_sampler_args
+    kwargs = super(ObjectNavRoboThorBaseConfig, self).train_task_sampler_args(
+  File "/home/ruoyuwang/code/eai_objnav/projects/objectnav_causalRNN/experiments/objectnav_thor_base.py", line 282, in train_task_sampler_args
+    res = self._get_sampler_args_for_scene_split(
+  File "/home/ruoyuwang/code/eai_objnav/projects/objectnav_causalRNN/experiments/objectnav_thor_base.py", line 237, in _get_sampler_args_for_scene_split
+    x_displays = get_open_x_displays(throw_error_if_empty=True)
+  File "/home/ruoyuwang/code/eai_objnav/allenact_plugins/ithor_plugin/ithor_util.py", line 83, in get_open_x_displays
+    raise IOError(
+OSError: Could not find any open X-displays on which to run AI2-THOR processes.  Please see the AI2-THOR installation instructions at https://allenact.org/installation/installation-framework/#installation-of-ithor-ithor-plugin for information as to how to start such displays.
+[1m[02/24 22:58:38[0m [1;31mERROR[0m[1m:][0m Encountered Exception. Terminating runner.	[runner.py: 1251]
+[1m[02/24 22:58:38[0m [1;31mERROR[0m[1m:][0m Traceback (most recent call last):
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/runner.py", line 1218, in log_and_close
+    raise Exception(
+Exception: Train worker 0 abnormally terminated
+	[runner.py: 1252]
+Traceback (most recent call last):
+  File "/home/ruoyuwang/code/eai_objnav/allenact/algorithms/onpolicy_sync/runner.py", line 1218, in log_and_close
+    raise Exception(
+Exception: Train worker 0 abnormally terminated
+[1m[02/24 22:58:38[0m [1;32mINFO[0m[1m:][0m Terminating train 0	[runner.py: 1327]
+[1m[02/24 22:58:38[0m [1;32mINFO[0m[1m:][0m Terminating valid 0	[runner.py: 1327]
+[1m[02/24 22:58:38[0m [1;32mINFO[0m[1m:][0m Joining train 0	[runner.py: 1327]
+[1m[02/24 22:58:38[0m [1;32mINFO[0m[1m:][0m Closed train 0	[runner.py: 1327]
+[1m[02/24 22:58:38[0m [1;32mINFO[0m[1m:][0m Joining valid 0	[runner.py: 1327]
+[1m[02/24 22:58:38[0m [1;32mINFO[0m[1m:][0m Closed valid 0	[runner.py: 1327]
